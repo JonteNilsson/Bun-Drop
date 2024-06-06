@@ -3,7 +3,7 @@
     {
       "id": 1,
       "title": "Bun-Drop Burger",
-      "price": 8.99,
+      "price": 11.99,
       "description": "A classic beef burger with lettuce, onion, pickles and tomatoes",
       "category": "burgers",
       "image": "/Images/StandardBurger.png"
@@ -11,7 +11,7 @@
     {
       "id": 2,
       "title": "Chickenburger",
-      "price": 8.99,
+      "price": 9.99,
       "description": "A juicy grilled chicken patty with fresh lettuce and a touch of mayo",
       "category": "burgers",
       "image": "/Images/ChickenBurger.jpg"
@@ -19,7 +19,7 @@
     {
       "id": 3,
       "title": "Plantbased Burger",
-      "price": 8.99,
+      "price": 11.5,
       "description": "A delicious plant-based patty with vegan cheese, lettuce, and tomato",
       "category": "burgers",
       "image": "/Images/PlantBasedBurger.png"
@@ -27,7 +27,7 @@
     {
       "id": 4,
       "title": "Spicy bacon cheese burger",
-      "price": 8.99,
+      "price": 13.99,
       "description": "A spicy beef patty topped with crispy bacon, cheddar cheese, and jalapenos",
       "category": "burgers",
       "image": "/Images/SpicyBaconCheese.png"
@@ -35,7 +35,7 @@
     {
       "id": 5,
       "title": "Tripple cheese burger",
-      "price": 8.99,
+      "price": 14.99,
       "description": "A mouth-watering burger with three layers of cheese and a beef patty",
       "category": "burgers",
       "image": "/Images/TrippleCheeseBurger.jpg"
@@ -43,7 +43,7 @@
     {
       "id": 6,
       "title": "Small cheese burger",
-      "price": 8.99,
+      "price": 3.99,
       "description": "A smaller version of our classic cheeseburger, perfect for a light meal",
       "category": "burgers",
       "image": "/Images/CheeseBurgerSmall.png"
@@ -51,7 +51,7 @@
     {
       "id": 7,
       "title": "Chili cheese burger",
-      "price": 8.99,
+      "price": 4.99,
       "description": "A beef patty topped with chili con carne and melted cheddar cheese",
       "category": "burgers",
       "image": "/Images/ChiliCheeseBurgerSmall.png"
@@ -59,7 +59,7 @@
     {
       "id": 8,
       "title": "Chicken nuggets",
-      "price": 8.99,
+      "price": 6.99,
       "description": "Crispy and tender chicken nuggets, perfect for dipping",
       "category": "sides",
       "image": "/Images/ChickenNuggets.png"
@@ -67,7 +67,7 @@
     {
       "id": 9,
       "title": "Chicken wings",
-      "price": 8.99,
+      "price": 7.5,
       "description": "Spicy and flavorful chicken wings, served with a tangy dipping sauce",
       "category": "sides",
       "image": "/Images/ChickenWings.png"
@@ -75,7 +75,7 @@
     {
       "id": 10,
       "title": "Chili cheese sticks",
-      "price": 8.99,
+      "price": 4.99,
       "description": "Deep-fried sticks filled with spicy cheese, perfect for a quick snack",
       "category": "sides",
       "image": "/Images/ChiliCheeseBurgerSmall.png"
@@ -83,7 +83,7 @@
     {
       "id": 11,
       "title": "Onion rings",
-      "price": 8.99,
+      "price": 4.99,
       "description": "Crispy battered onion rings, fried to golden perfection",
       "category": "sides",
       "image": "/Images/OnionRings.png"
@@ -91,7 +91,7 @@
     {
       "id": 12,
       "title": "Fries",
-      "price": 8.99,
+      "price": 2.99,
       "description": "Classic French fries, crispy on the outside and soft on the inside",
       "category": "sides",
       "image": "/Images/Fries.png"
@@ -99,7 +99,7 @@
     {
       "id": 13,
       "title": "Sweet potato fries",
-      "price": 8.99,
+      "price": 4.99,
       "description": "Sweet and crispy sweet potato fries, a healthier alternative",
       "category": "sides",
       "image": "/Images/SweetpotatoeFries.png"
@@ -107,7 +107,7 @@
     {
       "id": 14,
       "title": "Chilimayo dip",
-      "price": 8.99,
+      "price": 2.99,
       "description": "A spicy chili mayo dip, perfect for adding some heat to your meal",
       "category": "sides",
       "image": "/Images/ChiliMayoDressing.png"
@@ -115,7 +115,7 @@
     {
       "id": 15,
       "title": "Hot cheese dip",
-      "price": 8.99,
+      "price": 2.99,
       "description": "A rich and creamy hot cheese dip, perfect for nachos or fries",
       "category": "sides",
       "image": "/Images/HotCheeseDressing.png"
@@ -123,7 +123,7 @@
     {
       "id": 16,
       "title": "Mayo dip",
-      "price": 8.99,
+      "price": 2.99,
       "description": "A classic creamy mayonnaise dip, perfect for any side",
       "category": "sides",
       "image": "/Images/MayoDressing.png"
@@ -131,7 +131,7 @@
     {
       "id": 17,
       "title": "BBQ dip",
-      "price": 8.99,
+      "price": 2.99,
       "description": "A smoky BBQ dip, perfect for wings, fries, or anything you like",
       "category": "sides",
       "image": "/Images/BBQDressing.png"
@@ -139,7 +139,7 @@
     {
       "id": 18,
       "title": "Caramel apple pie",
-      "price": 8.99,
+      "price": 3.99,
       "description": "Delicious apple pie with caramel. Dangerously good!",
       "category": "desserts",
       "image": "/Images/CaramellApplePie.png"
@@ -147,7 +147,7 @@
     {
       "id": 19,
       "title": "Ice cream fudge",
-      "price": 8.99,
+      "price": 3.99,
       "description": "Creamy vanilla ice cream topped with rich chocolate fudge",
       "category": "desserts",
       "image": "/Images/IceCreamFudge.png"
@@ -155,7 +155,7 @@
     {
       "id": 20,
       "title": "Maccha ice cream",
-      "price": 8.99,
+      "price": 4.99,
       "description": "Refreshing maccha green tea ice cream, a unique and tasty treat",
       "category": "desserts",
       "image": "/Images/MacchaIceCream.png"
@@ -163,7 +163,7 @@
     {
       "id": 21,
       "title": "Vanilla milkshake",
-      "price": 8.99,
+      "price": 3.99,
       "description": "A classic vanilla milkshake, thick and creamy",
       "category": "desserts",
       "image": "/Images/VanillaMilkshake.png"
@@ -171,7 +171,7 @@
     {
       "id": 22,
       "title": "Small ice cream",
-      "price": 8.99,
+      "price": 1.99,
       "description": "A kid-sized portion of creamy vanilla ice cream",
       "category": "desserts",
       "image": "/Images/KidSizeIceCream.png"
@@ -179,7 +179,7 @@
     {
       "id": 23,
       "title": "Coca Cola",
-      "price": 8.99,
+      "price": 1.99,
       "description": "A refreshing can of classic Coca Cola",
       "category": "drinks",
       "image": "/Images/CocaCola.png"
@@ -187,7 +187,7 @@
     {
       "id": 24,
       "title": "Fanta",
-      "price": 8.99,
+      "price": 1.99,
       "description": "A refreshing can of fruity Fanta",
       "category": "drinks",
       "image": "/Images/Fanta.png"
@@ -195,7 +195,7 @@
     {
       "id": 25,
       "title": "Sprite",
-      "price": 8.99,
+      "price": 1.99,
       "description": "A refreshing can of crisp Sprite",
       "category": "drinks",
       "image": "/Images/Sprite.png"
