@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import "./App.css";
+import "@fontsource/roboto";
 import { userState } from "react";
 import Landingscreen from "./Pages/Landingscreen";
 import Menu from "./Pages/Menu";

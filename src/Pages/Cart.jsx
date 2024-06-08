@@ -50,26 +50,53 @@ function Cart() {
 
   return (
     <>
-      {cart.length === 0 ? (
-        // Kollar om cart är empty
-        <p>Your cart is empty</p>
-      ) : (
-        // Om items finns, displaya
-        cart.map((item, index) => (
-          <div key={index}>
-            <h3>{item.title}</h3>
-            <p>{item.description}</p>
-            <p>{item.price}</p>
-            <p>Quantity: {item.quantity}</p>
-            <button onClick={() => addItem(index)}>+</button>
-            <button onClick={() => removeItem(index, item.title)}>-</button>
-            <hr></hr>
+      <div className="wrapper">
+        <div className="main-container-big">
+          <h2 className="total-price-text">
+            Total Price: ${calculateTotalPrice()}
+          </h2>
+          <button onClick={goToPayment} className="goto-payment-button">
+            Go to payment
+          </button>
+          <img className="bun-image-menu" src="/Images/BunDrop.png" />
+          <div className="middle-main-container-small">
+            {cart.length === 0 ? (
+              // Kollar om cart är empty
+              <p>Your cart is empty</p>
+            ) : (
+              // Om items finns, displaya
+              cart.map((item, index) => (
+                <div className="item-container" key={index}>
+                  <img
+                    src={item.image}
+                    className="item-image"
+                    alt={item.title}
+                  />
+                  <div className="item-details">
+                    <h3 className="item-title">{item.title}</h3>
+                    <p className="item-description">{item.description}</p>
+                  </div>
+                  <h5 className="item-price">{item.price}$</h5>
+                  <p className="item-quantity">Quantity: {item.quantity}</p>
+                  <div className="quantity-buttons">
+                    <button
+                      className="quantity-button"
+                      onClick={() => addItem(index)}
+                    >
+                      +
+                    </button>
+                    <button
+                      className="quantity-button"
+                      onClick={() => removeItem(index, item.title)}
+                    >
+                      -
+                    </button>
+                  </div>
+                </div>
+              ))
+            )}
           </div>
-        ))
-      )}
-      <div>
-        <h2>Total Price: ${calculateTotalPrice()}</h2>
-        <button onClick={goToPayment}>Go to Payment</button>{" "}
+        </div>
       </div>
     </>
   );

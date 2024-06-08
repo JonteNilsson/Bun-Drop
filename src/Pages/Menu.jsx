@@ -7,6 +7,15 @@ function Menu() {
   const navigate = useNavigate();
   const [selectedCategory, setSelectedCategory] = useState(null);
 
+  const calculateTotalPrice = () => {
+    return cart
+      .reduce((total, item) => total + item.price * item.quantity, 0)
+      .toFixed(2);
+  };
+
+  const calculateTotalItems = () => {
+    return cart.reduce((total, item) => total + item.quantity, 0);
+  };
   // Fetchar "databas" från db.json
   useEffect(() => {
     fetch("http://localhost:3000/menu")
@@ -41,43 +50,77 @@ function Menu() {
   // Filtrerar menyn beroende på vald katerogi
   const filteredMenu = selectedCategory
     ? menu.filter((item) => item.category === selectedCategory)
-    : menu; // Om ingen kategori är vald, visa allt.
+    : menu; // Om inge  n kategori är vald, visa allt.
 
   return (
     <>
-      <div>
-        <button onClick={() => handleCategoryClick("burgers")}>Burgers</button>
-        <button onClick={() => handleCategoryClick("sides")}>Sides</button>
-        <button onClick={() => handleCategoryClick("desserts")}>
-          Desserts
-        </button>
-        <button onClick={() => handleCategoryClick("drinks")}>Drinks</button>
-        <button onClick={() => handleCategoryClick(null)}>All</button>
-      </div>
-      {filteredMenu.map((item) => (
-        <div className="item" key={item.id}>
-          <h3>{item.title}</h3>
-          <p>{item.description}</p>
-          <h5>{item.price}$</h5>
-          <img src={item.image} className="item-picture" alt={item.title} />
-          <button onClick={() => addToCart(item)}>Add to Cart</button>
-          <hr></hr>
-        </div>
-      ))}
-      <div>
-        <h2>Cart</h2>
-        {cart.map((item, index) => (
-          <div key={index}>
-            <h3>{item.title}</h3>
-            <p>{item.description}</p>
-            <p>{item.price}$</p>
-            <hr></hr>
+      <div className="wrapper">
+        <div className="main-container-big">
+          <h2 className="total-price-text">
+            Total Price: ${calculateTotalPrice()}
+          </h2>
+          <h2 className="total-items-text">{calculateTotalItems()}</h2>
+          <img
+            onClick={goToCart}
+            className="cart-icon"
+            src="/Images/shopping-cart.png"
+            alt="Cart"
+          />
+          <span className="tooltip">Go to cart</span>
+          <img className="bun-image-menu" src="/Images/BunDrop.png" />
+          <h1 className="menu-text">Menu</h1>
+          <div className="category-buttons">
+            <button onClick={() => handleCategoryClick("burgers")}>
+              Burgers
+            </button>
+            <button onClick={() => handleCategoryClick("sides")}>Sides</button>
+            <button onClick={() => handleCategoryClick("desserts")}>
+              Desserts
+            </button>
+            <button onClick={() => handleCategoryClick("drinks")}>
+              Drinks
+            </button>
+            <button onClick={() => handleCategoryClick(null)}>All</button>
           </div>
-        ))}
+          <button className="cart-button" onClick={goToCart}>
+            Go to Cart
+          </button>
+          <div className="main-container-small">
+            {filteredMenu.map((item) => (
+              <div className="item-container" key={item.id}>
+                <img src={item.image} className="item-image" alt={item.title} />
+                <div className="item-details">
+                  <h3 className="item-title">{item.title}</h3>
+                  <p className="item-description">{item.description}</p>
+                </div>
+                <h5 className="item-price">{item.price}$</h5>
+                <button
+                  className="add-to-cart-button"
+                  onClick={() => addToCart(item)}
+                >
+                  Add to cart
+                </button>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
-      <button onClick={goToCart}>Go to Cart</button>
     </>
   );
 }
 
 export default Menu;
+
+{
+  /* <div>
+            <h2>Cart</h2>
+            {cart.map((item, index) => (
+              <div key={index}>
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
+                <p>{item.price}$</p>
+                <hr></hr>
+              </div>
+            ))}
+          </div> */
+}
