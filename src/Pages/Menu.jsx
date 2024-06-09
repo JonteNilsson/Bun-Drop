@@ -110,17 +110,3 @@ function Menu() {
 }
 
 export default Menu;
-
-{
-  /* <div>
-            <h2>Cart</h2>
-            {cart.map((item, index) => (
-              <div key={index}>
-                <h3>{item.title}</h3>
-                <p>{item.description}</p>
-                <p>{item.price}$</p>
-                <hr></hr>
-              </div>
-            ))}
-          </div> */
-}
