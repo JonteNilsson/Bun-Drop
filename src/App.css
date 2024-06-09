@@ -304,6 +304,13 @@ body {
   border-radius: 15px;
 }
 
+.empty-cart-text {
+  position: absolute;
+  font-weight: bold;
+  right: 470px;
+  bottom: 220px;
+}
+
 .goto-payment-button {
   position: absolute;
   bottom: 15px;
@@ -319,4 +326,175 @@ body {
 
 .goto-payment-button:hover {
   border: 2px solid white;
+}
+
+.middle-main-container-small {
+  height: 50vh;
+  width: 55vw;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: auto;
+  flex-direction: column;
+  border-radius: 15px;
+}
+
+.goto-payment-button {
+  position: absolute;
+  bottom: 15px;
+  height: 40px;
+  right: 35px;
+  background-color: lightgreen;
+  border: 2px solid transparent;
+  font-size: 15px;
+  border-radius: 15px;
+  color: white;
+  font-weight: bold;
+}
+
+.goto-payment-button:hover {
+  border: 2px solid white;
+}
+
+.middle-payment-container-small {
+  height: 50vh;
+  width: 55vw;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: auto;
+  flex-direction: column;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 80%; /* Limit the maximum width for centering */
+  align-items: center;
+}
+
+.form-group {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.input-group {
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input {
+  width: 180px; /* Fill the width of the container */
+  padding: 10px;
+  box-sizing: border-box;
+  height: 25px;
+}
+
+.error-message {
+  font-size: 12px;
+  color: red;
+  position: absolute;
+  right: 230px; /* Adjust this value based on the desired position */
+  white-space: nowrap;
+  width: 200px; /* Set a fixed width for alignment */
+  text-align: left; /* Align text to the left */
+}
+
+.payment-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 20px 0; /* Add some margin for spacing */
+}
+
+.payment-button {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin: 0 10px; /* Add some margin between buttons */
+}
+
+.payment-button:hover {
+  background-color: #45a049;
+}
+
+.credit-card-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* Adjust width as necessary */
+}
+
+.submit-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.submit-button {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #45a049;
+}
+
+.error-message-payment {
+  font-size: 12px;
+  color: red;
+  position: absolute;
+  right: 260px; /* Adjust this value based on the desired position */
+  white-space: nowrap;
+  width: 200px; /* Set a fixed width for alignment */
+  text-align: left; /* Align text to the left */
+}
+
+.thank-you-text {
+  font-size: 35px;
+}
+
+.eta-text {
+}
+
+.payment-details-container {
+  display: flex; /* Use flexbox layout */
+  align-items: center; /* Align items vertically */
+}
+
+.payment-details-container p {
+  margin-right: 20px; /* Add some spacing between the paragraphs */
+}
+
+.return-button-container {
+  position: absolute;
+  bottom: 20px;
+  right: 40px;
+}
+.menu-return-button {
+  height: 35px;
+  background-color: white;
+  border: 3px solid transparent;
+  border-radius: 15px;
+}
+
+.menu-return-button:hover {
+  border: 3px solid green;
 }

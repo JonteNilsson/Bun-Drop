@@ -25,20 +25,36 @@ function Confirmation() {
   };
   return (
     <div>
-      <h2>Confirmation</h2>
       {paymentMethod && (
-        <div>
-          <p>Thank you for ordering with Bun-Drop!</p>
-          <p>
-            Your estimated time of delivery is approximately {deliveryTime}{" "}
-            minutes.
-          </p>
-          <p>Total Price: ${total}</p>
-          <p>
-            Payment Method:{" "}
-            {paymentMethod === "swish" ? "Swish" : "Credit Card"}
-          </p>
-          <button onClick={returnToMenu}>Return to Menu</button>
+        <div className="wrapper">
+          <div className="main-container-big">
+            <div className="return-button-container">
+              <button className="menu-return-button" onClick={returnToMenu}>
+                Return to Menu
+              </button>
+            </div>
+            <h1 className="menu-text">Confirmation</h1>
+            <img className="bun-image-menu" src="/Images/BunDrop.png" />
+            <div className="middle-payment-container-small">
+              <p className="thank-you-text">
+                Thank you for ordering with Bun-Drop!
+              </p>
+              <p className="eta-text">
+                Your estimated time of delivery is approximately{" "}
+                <strong>{deliveryTime}</strong> minutes.
+              </p>
+              <div className="payment-details-container">
+                <p>Total Price: ${total}</p>
+                <p>
+                  <strong>-</strong>
+                </p>
+                <p className="payment-text">
+                  Payment Method:{" "}
+                  {paymentMethod === "swish" ? "Swish" : "Credit Card"}
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       )}
     </div>

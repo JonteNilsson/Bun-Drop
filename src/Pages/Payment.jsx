@@ -120,102 +120,157 @@ function Payment() {
   };
 
   return (
-    <div>
-      <h2>Payment</h2>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <input
-            type="text"
-            name="name"
-            placeholder="Name"
-            onChange={handleChange}
-          />
-          {formErrors.name && <p style={{ color: "red" }}>{formErrors.name}</p>}
-        </div>
-        <div>
-          <input
-            type="text"
-            name="city"
-            placeholder="City"
-            onChange={handleChange}
-          />
-          {formErrors.city && <p style={{ color: "red" }}>{formErrors.city}</p>}
-        </div>
-        <div>
-          <input
-            type="text"
-            name="street"
-            placeholder="Street"
-            onChange={handleChange}
-          />
-          {formErrors.street && (
-            <p style={{ color: "red" }}>{formErrors.street}</p>
-          )}
-        </div>
-        <div>
-          <input
-            type="text"
-            name="houseNumber"
-            placeholder="House Number"
-            onChange={handleChange}
-          />
-          {formErrors.houseNumber && (
-            <p style={{ color: "red" }}>{formErrors.houseNumber}</p>
-          )}
-        </div>
-        <div>
-          <button onClick={handleSwishClick}>Swish</button>
-          <button onClick={handleCreditCardClick}>Credit Card</button>
-        </div>
-        {paymentMethod === "swish" && (
-          <div>
-            <input
-              type="text"
-              name="phoneNumber"
-              placeholder="Phone Number"
-              onChange={handleChange}
-              ref={phoneNumberInputRef}
-            />
-            {formErrors.phoneNumber && (
-              <p style={{ color: "red" }}>{formErrors.phoneNumber}</p>
-            )}
+    <div className="wrapper">
+      <div className="main-container-big">
+        <h1 className="menu-text">Payment</h1>
+        <img className="bun-image-menu" src="/Images/BunDrop.png" />
+        <div className="middle-payment-container-small">
+          <div className="form-container">
+            <form onSubmit={handleSubmit}>
+              <div className="form-group">
+                <div className="input-group">
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Name"
+                    onChange={handleChange}
+                    className="input"
+                  />
+                  {formErrors.name && (
+                    <p className="error-message">{formErrors.name}</p>
+                  )}
+                </div>
+              </div>
+              <div className="form-group">
+                <div className="input-group">
+                  <input
+                    type="text"
+                    name="city"
+                    placeholder="City"
+                    onChange={handleChange}
+                    className="input"
+                  />
+                  {formErrors.city && (
+                    <p className="error-message">{formErrors.city}</p>
+                  )}
+                </div>
+              </div>
+              <div className="form-group">
+                <div className="input-group">
+                  <input
+                    type="text"
+                    name="street"
+                    placeholder="Street"
+                    onChange={handleChange}
+                    className="input"
+                  />
+                  {formErrors.street && (
+                    <p className="error-message">{formErrors.street}</p>
+                  )}
+                </div>
+              </div>
+              <div className="form-group">
+                <div className="input-group">
+                  <input
+                    type="text"
+                    name="houseNumber"
+                    placeholder="House Number"
+                    onChange={handleChange}
+                    className="input"
+                  />
+                  {formErrors.houseNumber && (
+                    <p className="error-message">{formErrors.houseNumber}</p>
+                  )}
+                </div>
+              </div>
+              <div className="payment-buttons">
+                <button className="payment-button" onClick={handleSwishClick}>
+                  Swish
+                </button>
+                <button
+                  className="payment-button"
+                  onClick={handleCreditCardClick}
+                >
+                  Credit Card
+                </button>
+              </div>
+              {paymentMethod === "swish" && (
+                <div className="form-group">
+                  <div className="input-group">
+                    <input
+                      type="text"
+                      name="phoneNumber"
+                      placeholder="Phone Number"
+                      onChange={handleChange}
+                      ref={phoneNumberInputRef}
+                      className="input"
+                    />
+                    {formErrors.phoneNumber && (
+                      <p className="error-message">{formErrors.phoneNumber}</p>
+                    )}
+                  </div>
+                </div>
+              )}
+              {paymentMethod === "creditCard" && (
+                <div className="credit-card-container">
+                  <div className="form-group">
+                    <div className="input-group">
+                      <input
+                        type="text"
+                        name="cardNumber"
+                        placeholder="Card Number"
+                        onChange={handleChange}
+                        className="input"
+                      />
+                      {formErrors.cardNumber && (
+                        <p className="error-message">{formErrors.cardNumber}</p>
+                      )}
+                    </div>
+                  </div>
+                  <div className="form-group">
+                    <div className="input-group">
+                      <input
+                        type="text"
+                        name="cvv"
+                        placeholder="CVV"
+                        onChange={handleChange}
+                        className="input"
+                      />
+                      {formErrors.cvv && (
+                        <p className="error-message">{formErrors.cvv}</p>
+                      )}
+                    </div>
+                  </div>
+                  <div className="form-group">
+                    <div className="input-group">
+                      <input
+                        type="text"
+                        name="expiryDate"
+                        placeholder="Expiry Date (MM/YY)"
+                        onChange={handleChange}
+                        className="input"
+                      />
+                      {formErrors.expiryDate && (
+                        <p className="error-message">{formErrors.expiryDate}</p>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              )}
+              {formErrors.paymentMethod && (
+                <p className="error-message-payment">
+                  {formErrors.paymentMethod}
+                </p>
+              )}
+              <div className="submit-container">
+                <button className="submit-button" type="submit">
+                  Submit
+                </button>
+              </div>
+            </form>
           </div>
-        )}
-        {paymentMethod === "creditCard" && (
-          <div>
-            <input
-              type="text"
-              name="cardNumber"
-              placeholder="Card Number"
-              onChange={handleChange}
-            />
-            {formErrors.cardNumber && (
-              <p style={{ color: "red" }}>{formErrors.cardNumber}</p>
-            )}
-            <input
-              type="text"
-              name="cvv"
-              placeholder="CVV"
-              onChange={handleChange}
-            />
-            {formErrors.cvv && <p style={{ color: "red" }}>{formErrors.cvv}</p>}
-            <input
-              type="text"
-              name="expiryDate"
-              placeholder="Expiry Date (MM/YY)"
-              onChange={handleChange}
-            />
-            {formErrors.expiryDate && (
-              <p style={{ color: "red" }}>{formErrors.expiryDate}</p>
-            )}
-          </div>
-        )}
-        {formErrors.paymentMethod && (
-          <p style={{ color: "red" }}>{formErrors.paymentMethod}</p>
-        )}
-        <button type="submit">Submit</button>
-      </form>
-      <p>Total Price: ${calculateTotalPrice()}</p>
+        </div>
+      </div>
     </div>
   );
 }

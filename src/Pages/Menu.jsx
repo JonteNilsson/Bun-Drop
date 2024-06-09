@@ -50,7 +50,7 @@ function Menu() {
   // Filtrerar menyn beroende på vald katerogi
   const filteredMenu = selectedCategory
     ? menu.filter((item) => item.category === selectedCategory)
-    : menu; // Om inge  n kategori är vald, visa allt.
+    : menu; // Om ingen kategori är vald, visa allt.
 
   return (
     <>

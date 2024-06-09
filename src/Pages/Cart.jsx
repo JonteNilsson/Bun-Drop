@@ -52,17 +52,21 @@ function Cart() {
     <>
       <div className="wrapper">
         <div className="main-container-big">
+          <h1 className="menu-text">Cart</h1>
           <h2 className="total-price-text">
             Total Price: ${calculateTotalPrice()}
           </h2>
-          <button onClick={goToPayment} className="goto-payment-button">
-            Go to payment
-          </button>
+          <div className="return-button-container">
+            <button onClick={goToPayment} className="menu-return-button">
+              Go to payment
+            </button>
+          </div>
+
           <img className="bun-image-menu" src="/Images/BunDrop.png" />
           <div className="middle-main-container-small">
             {cart.length === 0 ? (
               // Kollar om cart är empty
-              <p>Your cart is empty</p>
+              <p className="empty-cart-text">Your cart is empty</p>
             ) : (
               // Om items finns, displaya
               cart.map((item, index) => (
