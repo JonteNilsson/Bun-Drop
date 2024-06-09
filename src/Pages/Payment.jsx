@@ -40,7 +40,7 @@ function Payment() {
     setPhoneNumberError("");
   };
 
-  // Kollar ändringar i input fält for foromuläret
+  // Kollar ändringar i input fält for formuläret
   const handleChange = (event) => {
     const { name, value } = event.target;
     // Update form data
