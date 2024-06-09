@@ -203,7 +203,7 @@ body {
 
 .category-buttons {
   position: absolute;
-  left: 115px; /* Adjust as needed */
+  left: 115px;
   bottom: 60px;
   display: flex;
   flex-direction: column;
@@ -330,7 +330,7 @@ body {
 .form-container {
   display: flex;
   flex-direction: column;
-  max-width: 80%; /* Limit the maximum width for centering */
+  max-width: 80%;
   align-items: center;
 }
 
@@ -349,7 +349,7 @@ body {
 }
 
 .input {
-  width: 180px; /* Fill the width of the container */
+  width: 180px;
   padding: 10px;
   box-sizing: border-box;
   height: 25px;
@@ -359,10 +359,10 @@ body {
   font-size: 12px;
   color: red;
   position: absolute;
-  right: 230px; /* Adjust this value based on the desired position */
+  right: 230px;
   white-space: nowrap;
-  width: 200px; /* Set a fixed width for alignment */
-  text-align: left; /* Align text to the left */
+  width: 200px;
+  text-align: left;
 }
 
 .payment-buttons {
@@ -370,7 +370,7 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin: 20px 0; /* Add some margin for spacing */
+  margin: 20px 0;
 }
 
 .payment-button {
@@ -379,7 +379,7 @@ body {
   color: white;
   border: none;
   cursor: pointer;
-  margin: 0 10px; /* Add some margin between buttons */
+  margin: 0 10px;
 }
 
 .payment-button:hover {
